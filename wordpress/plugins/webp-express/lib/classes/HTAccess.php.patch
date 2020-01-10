@@ -1,0 +1,12 @@
+--- HTAccess_original.php	2019-10-05 19:12:36.000000000 -0300
++++ HTAccess_editado.php	2020-01-05 01:55:56.732319000 -0300
+@@ -240,6 +240,9 @@
+         }
+ 
+         /* Add rules to .htaccess  */
++        if (!function_exists('switch_to_locale')) {
++            require_once ABSPATH . 'wp-includes/l10n.php';
++        }
+         if (!function_exists('insert_with_markers')) {
+             require_once ABSPATH . 'wp-admin/includes/misc.php';
+         }

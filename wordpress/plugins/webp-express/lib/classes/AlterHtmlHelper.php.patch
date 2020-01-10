@@ -1,0 +1,11 @@
+--- AlterHtmlHelper_original.php	2019-10-05 19:12:36.000000000 -0300
++++ AlterHtmlHelper_editado.php	2020-01-06 11:02:35.310839573 -0300
+@@ -215,7 +215,7 @@
+         }
+ 
+         // Fail for webp-disabled  browsers (when "only-for-webp-enabled-browsers" is set)
+-        if ((self::$options['only-for-webp-enabled-browsers']) && (strpos($_SERVER['HTTP_ACCEPT'], 'image/webp') === false)) {
++        if ((self::$options['only-for-webp-enabled-browsers']) && (!isset($_SERVER['HTTP_ACCEPT']) || strpos($_SERVER['HTTP_ACCEPT'], 'image/webp') === false)) {
+             return $returnValueOnFail;
+         }
+ 
