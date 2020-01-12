@@ -1,0 +1,11 @@
+--- REST_original.php	2020-01-12 13:06:42.568909406 -0300
++++ REST_editado.php	2020-01-12 13:05:16.712312469 -0300
+@@ -184,7 +184,7 @@
+ 
+         $cachettl = $this->config->get('cache_ttl');
+         // If cache is newer than $cachettl seconds, we use the cache!
+-        if (time() - $cacheid['age'] < $cachettl) {
++        if (is_array($cacheid) && time() - $cacheid['age'] < $cachettl) {
+             return $this->getCache($url);
+         }
+ 
