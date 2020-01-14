@@ -1,0 +1,11 @@
+--- confirm.blade.original.php	2020-01-13 20:49:18.412698502 -0300
++++ confirm.blade.editado.php	2020-01-14 03:10:09.825672695 -0300
+@@ -112,7 +112,7 @@
+             </ul>
+ 
+             @if ($campaign->step() >= 5)
+-                @if (!$score['result'])
++                @if (empty($score['result']))
+                     @if (!Acelle\Model\Setting::isYes('spamassassin.required'))
+                         <!--1.	Show ra error như dưới nhưng vẫn cho gửi campaign
+                         2.	Khi user click Send thì show 1 cái confirm box: “Your message does not pass SpamScore test, are you sure you want to proceed anyway?”-->
