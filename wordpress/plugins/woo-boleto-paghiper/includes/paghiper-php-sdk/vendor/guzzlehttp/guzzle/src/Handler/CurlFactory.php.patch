@@ -1,0 +1,11 @@
+--- CurlFactory_original.php	2020-10-05 18:47:48.000000000 -0300
++++ CurlFactory_editado.php	2021-02-21 01:22:09.664719401 -0300
+@@ -16,7 +16,7 @@
+ class CurlFactory implements CurlFactoryInterface
+ {
+     /** @var array */
+-    private $handles;
++    private $handles = [];
+ 
+     /** @var int Total number of idle handles to keep in cache */
+     private $maxHandles;
