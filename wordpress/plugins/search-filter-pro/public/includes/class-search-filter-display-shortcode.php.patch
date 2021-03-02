@@ -1,0 +1,13 @@
+--- class-search-filter-display-shortcode_original.php	2021-03-02 18:03:37.901441000 -0300
++++ class-search-filter-display-shortcode_editado.php	2021-03-02 18:04:33.561926267 -0300
+@@ -1123,6 +1123,10 @@
+ 
+         $returnvar .= "</li>";
+ 
++        if (stripos($field_html, '<li') === false) {
++            return '';
++        }
++
+         return $returnvar;
+     }
+ 
