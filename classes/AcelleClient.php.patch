@@ -1,4 +1,4 @@
---- AcelleClient_original.php	2021-03-03 16:20:00.072272921 -0300
+--- AcelleClient_original.php	2021-03-03 16:45:57.331632479 -0300
 +++ AcelleClient_editado.php	2021-03-03 16:19:54.024224612 -0300
 @@ -197,7 +197,7 @@
              unset($args['api_token']);
