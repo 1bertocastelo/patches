@@ -1,10 +1,10 @@
 --- class-manager_original.php	2020-12-17 21:41:11.422559360 -0300
-+++ class-manager_editado.php	2020-12-17 21:41:32.622596576 -0300
++++ class-manager_editado.php	2021-03-15 19:52:00.758867220 -0300
 @@ -245,6 +245,9 @@
  			if ( Str::starts_with( '_', $meta_key ) || Str::starts_with( 'rank_math_', $meta_key ) ) {
  				continue;
  			}
-+			if (in_array($meta_key, ['_POST', '_COOKIE', '_SERVER']) || strpos($meta_key, '_bytes') !== false) {
++			if (in_array($meta_key, ['_POST', '_COOKIE', '_SERVER']) || strpos($meta_key, '_bytes') !== false || strpos($meta_key, 'certisign_document_data') !== false || strpos($meta_key, 'certisign_upload_args') !== false || strpos($meta_key, 'certisign_create_args') !== false) {
 +				continue;
 +			}
  
